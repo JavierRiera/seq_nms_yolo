@@ -3,7 +3,7 @@ import os, sys, getopt
 import glob
 
 def usage():
-    print 'python video2img.py -i <video file>'
+    print('python video2img.py -i <video file>')
 
 def main():
     try:
@@ -36,7 +36,7 @@ def main():
       success,image = vidcap.read()
       if not success:
           break
-      print 'Read a new frame: {}'.format(count)
+      print('Read a new frame: {}'.format(count))
       cv2.imwrite(os.path.join('input', 'frame{}.jpg'.format(count)), image)     # save frame as JPEG file
       count += 1
 
