@@ -34,7 +34,7 @@ class METADATA(Structure):
     _fields_ = [("classes", c_int),
                 ("names", POINTER(c_char_p))]
 
-lib = CDLL("libdarknet.so", RTLD_GLOBAL)
+lib = CDLL("/home/alumnos/e360572/ProyectosPycharm/LAB2/seq_nms_yolo-master/libdarknet.so", RTLD_GLOBAL)
 lib.network_width.argtypes = [c_void_p]
 lib.network_width.restype = c_int
 lib.network_height.argtypes = [c_void_p]
@@ -131,8 +131,8 @@ def detect_img(filename, cfg="cfg/tiny-yolo.cfg", weights="tiny-yolo.weights", d
     start=time.time()
     r = detect(net, meta, filename, thresh=thresh, hier_thresh=hier_thresh, nms=nms)
     end=time.time()
-    print 'detection time:{:.4f}'.format(end-start)
-    print r
+    print('detection time:{:.4f}'.format(end-start))
+    print(r)
     return r
 
 def detect_imgs(filenames, cfg="cfg/yolo.cfg", weights="yolo.weights", data="cfg/coco.data", thresh=.5, hier_thresh=.5, nms=.45):
@@ -143,7 +143,7 @@ def detect_imgs(filenames, cfg="cfg/yolo.cfg", weights="yolo.weights", data="cfg
         start=time.time()
         r = detect(net, meta, filename, thresh=thresh, hier_thresh=hier_thresh, nms=nms)
         end=time.time()
-        print '({}/{})detection time:{:.4f}'.format(i+1, len(filenames), end-start)
+        print('({}/{})detection time:{:.4f}'.format(i+1, len(filenames), end-start))
         rs.append(r)
     return rs
 
@@ -157,5 +157,5 @@ if __name__ == "__main__":
     meta = load_meta("cfg/coco.data")
     re = detect(net, meta, "data/dog.jpg", nms=0)
     for objet_id, objet in enumerate(re):
-        print 'objet:{}'.format(objet_id+1)
-        print objet
+        print('objet:{}'.format(objet_id+1))
+        print(objet)
