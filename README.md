@@ -4,6 +4,7 @@ This project combines **YOLOv2**([reference](https://arxiv.org/abs/1506.02640)) 
 1. This code works for a python 2.7 version with the following packages installed (following the conda instructions to install them):
 
 
+          cuda:               conda install -c anaconda cudatoolkit
           cv2:                conda install -c conda-forge opencv
           matplotlib:         conda install matplotlib
           Pillow:             conda install Pillow
