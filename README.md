@@ -11,13 +11,13 @@
 This project combines **YOLOv2**([reference](https://arxiv.org/abs/1506.02640)) and **seq-nms**([reference](https://arxiv.org/abs/1602.08465)) to realise **real time video detection**.
 
 ## Steps
-1. This code works for a python 2.7 version with the following packages installed (and the conda instructions to install them):
-          cv2: conda install -c conda-forge opencv
-          matplotlib: conda install matplotlib
-          Pillow: conda install Pillow
-          scipy: conda install -c conda-forge scipy
-          tensorflow: conda install tensorflow
-          object_detection: conda install -c conda-forge tf_object_detection
+1. This code works for a python 2.7 version with the following packages installed (following the conda instructions to install them):
+          cv2:                conda install -c conda-forge opencv
+          matplotlib:         conda install matplotlib
+          Pillow:             conda install Pillow
+          scipy:              conda install -c conda-forge scipy
+          tensorflow:         conda install tensorflow
+          object_detection:   conda install -c conda-forge tf_object_detection
           
 2. `make` the project;
 
@@ -25,10 +25,15 @@ This project combines **YOLOv2**([reference](https://arxiv.org/abs/1506.02640)) 
 
 4. Copy a video file to the video folder, for example, `input.mp4`;
 
-1. In the video folder, run `python video2img.py -i input.mp4` and then `python get_pkllist.py`;
+5. In the video folder, run `python video2img.py -i input.mp4` and then `python get_pkllist.py`;
 
-1. Return to root floder and run `python yolo_seqnms.py` to generate output images in `video/output`;
-1. If you want to reconstruct a video from these output images, you can go to the video folder and run `python img2video.py -i output`
+6. Change line 37 in yolo_detection.py to 
+          lib = CDLL("xx/libdarknet.so", RTLD_GLOBAL) 
+   where xx is the root folder rute of the proyect
+
+7. Return to root floder and run `python yolo_seqnms.py` to generate output images in `video/output`;
+
+8. If you want to reconstruct a video from these output images, you can go to the video folder and run `python img2video.py -i output`
 
 And you will see detection results in `video/output`
 
