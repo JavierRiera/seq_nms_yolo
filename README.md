@@ -1,10 +1,17 @@
 This project combines **YOLOv2**([reference](https://arxiv.org/abs/1506.02640)) and **seq-nms**([reference](https://arxiv.org/abs/1602.08465)) to realise **real time video detection**.
 
 ## Steps
-1. This code works for a python 2.7 version with the following packages installed (following the conda instructions to install them):
+0. This code works for a conda enviroment using python 2.7. to create a conda enviroment with the needed packages installed open the terminal and use the next instructions:
 
+          conda create --name yolo_seqnms_env python=2.7
+          
+activate the enviroment:
 
-          cuda:               conda install -c anaconda cudatoolkit
+          source activate
+          conda activate yolo_seqnms_env
+
+install the following packages:
+
           cv2:                conda install -c conda-forge opencv
           matplotlib:         conda install matplotlib
           Pillow:             conda install Pillow
@@ -14,7 +21,12 @@ This project combines **YOLOv2**([reference](https://arxiv.org/abs/1506.02640)) 
           
           
 
-2. `make` the project;
+1. clone the github repository in the directory you want executing the following instruction from terminal in the desired folder:
+
+          git clone 
+          
+          
+2. go to the root directory (/seq_nms_yolo) and `make` the project;
 
 3. Download `yolo.weights` and `tiny-yolo.weights` by running `wget https://pjreddie.com/media/files/yolo.weights` and  `wget https://pjreddie.com/media/files/yolov2-tiny-voc.weights`
 
