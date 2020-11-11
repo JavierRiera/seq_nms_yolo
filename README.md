@@ -23,7 +23,7 @@ install the following packages:
 
 1. clone the github repository in the directory you want executing the following instruction from terminal in the desired folder:
 
-          git clone 
+          git clone https://github.com/JavierRiera/seq_nms_yolo.git
           
           
 2. go to the root directory (/seq_nms_yolo) and `make` the project;
