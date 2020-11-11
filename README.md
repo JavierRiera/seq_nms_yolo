@@ -34,7 +34,7 @@ install the following packages:
 
 5. In the video folder, run `python video2img.py -i input.mp4` and then `python get_pkllist.py`;
 
-6. Change line 37 in yolo_detection.py to 
+6. Return to root folder and change line 37 in yolo_detection.py to 
 
 
           lib = CDLL("xx/libdarknet.so", RTLD_GLOBAL) 
@@ -42,7 +42,7 @@ install the following packages:
           
    where xx is the root folder rute of the proyect
    
-7. Return to root folder and run `python yolo_seqnms.py` to generate output images in `video/output`;
+7.  Run `python yolo_seqnms.py` to generate output images in `video/output`;
 
 8. If you want to reconstruct a video from these output images, you can go to the video folder and run `python img2video.py -i output`
 
