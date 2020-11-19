@@ -48,7 +48,7 @@ install the following packages:
 
 And you will see detection results in `video/output`
 
-Note: If you want to run this algorithm with multiple video files, make sure to errase the generated files and folders from the Video directory (Input[folder], Output[folder], pklist.txt)
+Note: If you want to run this algorithm with multiple video files, make sure to errase the generated files and folders from the Video directory (`Input[folder]`, `Output[folder]`, `pkllist.txt`)
 
 ## Reference
 This project copies lots of code from [darknet](https://github.com/pjreddie/darknet) , [Seq-NMS](https://github.com/lrghust/Seq-NMS) and  [models](https://github.com/tensorflow/models).
